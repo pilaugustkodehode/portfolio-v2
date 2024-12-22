@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pil's Portfolio</title>
+
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="questBar">
+      <div class="gameBar">
+        <img
+          src="./images/Assets/Quests.png"
+          alt="Quests Icon"
+          class="literature"
+        />
+        <p class="questText" onclick="dropDown()" id="dropbtn">QUESTS</p>
+        <div id="dropMenu" class="dropMenu">
+          <p class="questItem" id="questItem1">
+            Make your Avatar by clicking the icon in the top right.
+          </p>
+          <p class="questItem" id="questItem2">Find the EXP bubbles.</p>
+          <p class="questItem" id="questItem3">
+            Write the sum of all numbers on the page combined:<input
+              type="text"
+              class="totalSum"
+              id="totalSum"
+            /><input type="submit" class="submitQuest" value="Check" />
+          </p>
+          <p class="questItem" id="questItem4">Click the hidden star.</p>
+        </div>
+      </div>
+      <div class="gameBar">
+        <p class="levelText">LVL:</p>
+        <img src="./images/Assets/Exp0.png" alt="" class="expBar" />
+        <p class="levelCount">1</p>
+        <img
+          src="./images/Avatar/Body/Eye1.png"
+          alt="User Avatar"
+          class="userPfp"
+          onclick="openAvatarEditor()"
+        />
+      </div>
+      <div id="avatarEditorModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeAvatarEditor()">&times;</span>
+          <h2 class="characterEditText">Customize Your Avatar</h2>
+          <div class="characterLayout">
+            <canvas id="editorCanvas"></canvas>
+            <div class="editOptions">
+              <div class="hair">
+                <h3 class="editText">Hair:</h3>
+                <div class="arrows">
+                  <img src="./images/Assets/ArrowL.png" alt="" class="ArrowL" id="arrowLHair"/>
+                  <img src="./images/Assets/ArrowR.png" alt="" class="ArrowR" id="arrowRHair"/>
+                </div>
+              </div>
+              <div class="eyes">
+                <h3 class="editText">Eyes:</h3>
+                <div class="arrows">
+                  <img src="./images/Assets/ArrowL.png" alt="" class="ArrowL" id="arrowLEyes"/>
+                  <img src="./images/Assets/ArrowR.png" alt="" class="ArrowR" id="arrowREyes"/>
+                </div>
+              </div>
+              <div class="eyebrows">
+                <h3 class="editText">Eyebrows:</h3>
+                <div class="arrows">
+                  <img src="./images/Assets/ArrowL.png" alt="" class="ArrowL" id="arrowLEyebrows"/>
+                  <img src="./images/Assets/ArrowR.png" alt="" class="ArrowR" id="arrowREyebrows"/>
+                </div>
+              </div>
+              <div class="clothes">
+                <h3 class="editText">Clothes:</h3>
+                <div class="arrows">
+                  <img src="./images/Assets/ArrowL.png" alt="" class="ArrowL" id="arrowLClothes"/>
+                  <img src="./images/Assets/ArrowR.png" alt="" class="ArrowR" id="arrowRClothes"/>
+                </div>
+                <div class="eyeColor">
+                    <h3 class="editText">Eyecolor:</h3>
+                    <div class="colorwheelEye">
+                        <input type="color" id="eyeColorPicker" class="colorPicker" />
+                    </div>
+                  </div>
+                <div class="clothesColor">
+                    <h3 class="editText">Clothing color:</h3>
+                    <div class="colorwheelClothes">
+                        <input type="color" id="clothesColorPicker" class="colorPicker" />
+                    </div>
+                  </div>
+                  <div class="hairColor">
+                    <h3 class="editText">Haircolor:</h3>
+                    <div class="colorwheelHair">
+                        <input type="color" id="hairColorPicker" class="colorPicker" />
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="saveCharacter">
+            <button class="saveBtn">SAVE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header">
+      <div class="headerimg">
+        <img
+          src="./images/Desktop - 4.png"
+          alt="Background Image"
+          class="headerimgFile"
+        />
+      </div>
+      <div class="headerTitle">
+        <div class="headerText">
+          <h1 class="title">Pil August</h1>
+          <h2 class="bio">Front-end developer and designer</h2>
+        </div>
+        <img src="./images/pfp.jpg" alt="Profile Picture" class="pfp" />
+      </div>
+
+      <div class="scrollDown">↓</div>
+    </div>
+    <div class="mainContainer">
+      <div class="aboutMe">
+        <h1 class="headerText">ABOUT</h1>
+        <p class="infoText">
+          Yello! My name is Pil August Ekanger, a 26 year old queer and non
+          binary website developer focusing on design. I’m proficient in HTML,
+          CSS and Figma, and would say I'm intermediate in JavaScript. I'm based
+          in Norway, and fluent in both Norwegian and English.
+
+          <br /><br />
+
+          Previously, I’ve worked with a bit of design through my bachelors
+          degree in theatre. This included making posters, or for the bachelor
+          itself; concept designs for scenography options. I’ve also been
+          designing stream overlays for myself. Within coding, I’ve only
+          recently started making websites from scratch, but have previously
+          used carrd.co to design some portfolios. I find it very exciting to do
+          it from scratch with HTML and CSS, and it’s something I’ve picked up
+          rather fast.
+
+          <br /><br />
+
+          I’ve always been fond of technology, and grew up entranced with it. To
+          this day, most of my free time is spent either drawing digitally,
+          playing video games and the likes. At the moment, my current obsession
+          is Baldur’s Gate 3, which I play both on PC and Playstation 5. There’s
+          truly nothing like kicking back on the couch and slaying your way
+          through Faerûn after a stressful day. I also spend some time on social
+          media under my personas name, where I post whatever I’ve drawn the
+          last few days. Currently I’m doing a December calendar where I draw
+          different Pokémon, which has been a huge interest of mine since I was
+          a wee lad.
+
+          <br /><br />
+
+          I absolutely love working with design, and it is something I have an
+          eye for. The dream would be to work with designing and art, which
+          would let me combine my two biggest interests; art and technology. I
+          have a burning need to leave something behind, to let my presence have
+          been more than a shadow in the dark when I’m gone, and I feel like
+          contributing to making things that stir people’s emotions would be a
+          wonderful way to do this. Therefore, I’m excited about what the future
+          will hold, and I’m motivated to grow as a person and designer as I go.
+        </p>
+        <div id="pokemonFact"></div>
+        <div class="scrollDownSmall">↓</div>
+      </div>
+      <div class="experience">
+        <h1 class="headerText">EXPERIENCE</h1>
+        <p class="infoText" style="text-indent: 30px"><strong>September 2024 - Mars 2025</strong><br /></p>
+        <p class="infoText">
+          Front-end course hosted by JobLoop, with focus on use of HTML, CSS, JS and Figma.
+        </p>
+        <br /><br />
+        <p class="infoText" style="text-indent: 30px"><strong>2023</strong><br /></p>
+        <p class="infoText">
+          Started practicing digital art instead of only doing traditional art.  
+        </p>
+        <br /><br />
+
+        <h2 class="subHeader">PROFICIENCIES</h2>
+        <p class="infoText" style="text-indent: 30px">
+          <strong>Design programs:</strong><br /></p>
+          <p class="infoText">Procreate, Fire Alpaca, Krita, Carrd, Figma. <br /><br /></p>
+          <p class="infoText" style="text-indent: 30px">
+          <strong>Consoles</strong><br />
+          <p class="infoText">PlayStation 5, Nintendo Switch, PC, MetaQuest 3. Older consoles include GameCube, SNES, Wii, DS/3DS and earlier PlayStation models.
+        </p>
+        <div class="scrollDownSmall">↓</div>
+      </div>
+      <div class="projects">
+        <h1 class="headerText">PROJECTS</h1>
+        <p class="infoText">
+          Here's a collection of both websites I've made, as well as designs and
+          illustrations. They're put in neat carousels, so why don't you go for
+          a ride?
+        </p>
+        <div class="projectDiv">
+          <div class="graphicPortfolio">
+            <h2 class="subHeader">GRAPHICS</h2>
+            <div class="carousel" id="artCarousel">
+              <div class="carouselImg">
+                <img src="./images/carousel_art/art1.png" alt="Art 1" class="carouselItem1">
+                <img src="./images/carousel_art/art2.png" alt="Art 1" class="carouselItem1">
+                <img src="./images/carousel_art/art3.png" alt="Art 1" class="carouselItem1">
+                <img src="./images/carousel_art/art4.png" alt="Art 1" class="carouselItem1">
+                <img src="./images/carousel_art/art5.png" alt="Art 1" class="carouselItem1">
+                <img src="./images/carousel_art/art6.png" alt="Art 1" class="carouselItem1">
+              </div>
+              <div class="carouselBtn">
+                <button class="carouselPrev" id="artPrev">&lt;</button>
+                <button class="carouselNext" id="artNext">&gt;</button>
+              </div>
+            </div>
+          </div>
+          <div class="websitePortfolio">
+            <h2 class="subHeader">WEBSITES</h2>
+            <div class="carousel" id="websitesCarousel">
+              <div class="carouselImg">
+                <iframe
+                  src="https://pilaugust.github.io/Task-2/"
+                  frameborder="0"
+                  class="carouselItem2"
+                ></iframe>
+                <iframe
+                  src="https://pilaugust.github.io/Task-5/"
+                  frameborder="0"
+                  class="carouselItem2"
+                ></iframe>
+              </div>
+              <div class="carouselBtn">
+                <button class="carouselPrev" id="websitesPrev">&lt;</button>
+                <button class="carouselNext" id="websitesNext">&gt;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scrollDownSmall">↓</div>
+      </div>
+      <div class="contact">
+        <h1 class="headerText">CONTACT</h1>
+        <p class="infoText">
+          I'm available for contact through any of the
+          social bubbles below!
+        </p>
+        <!-- <div class="contactContainer">
+          <div class="contactForm">
+            <input type="text" placeholder="Name" class="textBox" />
+            <input type="text" placeholder="E-mail" class="textBox" />
+            <textarea placeholder="Message" class="textBoxMsg"></textarea>
+            <input type="submit" class="submit" id="submit" value="SUBMIT" />
+          </div> -->
+          <div class="socialMedia">
+            <div class="bubble">
+              <img
+                src="./images/Assets/ExpPoints.png"
+                alt=""
+                class="expPoints"
+              />
+            </div>
+            <div class="bubble">
+              <a href="https://github.com/pilaugust"
+                ><img src="./images/Some/github.png" alt="" class="soMeBtn"
+              /></a>
+            </div>
+            <div class="bubble">
+              <a href=""
+                ><img src="./images/Some/linkedin.png" alt="" class="soMeBtn"
+              /></a>
+            </div>
+            <div class="bubble">
+              <a href="https://bsky.app/profile/pilaugust.bsky.social"
+                ><img src="./images/Some/bsky.png" alt="" class="soMeBtn"
+              /></a>
+            </div>
+            <!-- <div class="bubble">
+              <a href=""
+                ><img src="./images/Some/mail.png" alt="" class="soMeBtn"
+              /></a>
+            </div> -->
+            <div class="bubble">
+              <img
+                src="./images/Assets/ExpPoints.png"
+                alt=""
+                class="expPoints"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <small class="smallText">Social media icons edited by me. All art is by me.</small>
+    </div>
+  </body>
+</html>

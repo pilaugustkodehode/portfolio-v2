@@ -1,0 +1,622 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    background-color: #070818;
+    overflow-x: hidden;
+}
+
+.header {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.headerimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.headerimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.headerimg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(7, 8, 24, 0) 70%, rgba(7, 8, 24, 1) 100%); /* Fades to body background color */
+    z-index: 1; /* Place above the image */
+}
+
+.questBar {
+    position: sticky;    /* Makes the element sticky */
+    top: 0;              /* Sticks the element at the top */
+    z-index: 9999;          /* Keeps it above other elements */
+    height: 50px;
+    background-color: #0c0e29;
+    width: auto;
+    margin-top: -17px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+}
+
+.headerTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    z-index: 1;
+    position: relative;
+    padding-top: 80px;
+    height: fit-content;    
+}
+
+.title {
+    font-family: "Poppins", sans-serif;
+    font-size: 150px;
+    font-weight: 300;
+    color: rgb(216, 216, 216);
+    margin-bottom: -20px;
+}
+
+.pfp {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 45px;
+}
+
+.scrollDown {
+    background-color: rgba(71, 71, 88, 0.468);
+    width: 70px;
+    height: 70px;
+    margin-top: 150px;
+    z-index: 1;
+    position: relative;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.444);
+    font-size: 30px;
+    padding-bottom: 2px;
+}
+
+.scrollDown:hover{
+    background-color: rgb(71, 71, 88);
+    transition: ease-in 0.1s;
+    transition: ease-out 0.1s;
+    color: rgb(216, 216, 216);
+    cursor: pointer;
+}
+
+.headerimgFile{
+    opacity: 50%;
+}
+
+.bio{
+    color: rgb(216, 216, 216);
+    padding-left: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+.headerText{
+    font-family: "Poppins", sans-serif;
+    color: rgb(216, 216, 216);    
+}
+
+.subHeader{
+    font-family: "Poppins", sans-serif;
+    color: rgb(216, 216, 216);
+    font-size: 21px; 
+}
+
+.infoText{
+    font-family: "Poppins", sans-serif;
+    color: rgb(216, 216, 216);
+}
+
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+}
+
+.questText{
+    font-family: "Tiny5", sans-serif;
+    color: rgb(216, 216, 216);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.questText:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.levelText{
+    font-family: "Tiny5", sans-serif;
+    color: rgb(216, 216, 216);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.expBar{
+    width: 70px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.userPfp{
+    height: 40px;
+    width: 40px;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.literature{
+    height: 40px;
+    width: 40px;
+    padding-right: 5px;
+}
+
+.gameBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.levelCount{
+    font-family: "Tiny5", sans-serif;
+    color: rgb(216, 216, 216);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.aboutMe{
+    height: fit-content;
+}
+
+.experience{
+    height: fit-content;
+}
+
+.projects{
+    height: fit-content;
+}
+
+.contact{
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.scrollDownSmall {
+    width: 70px;
+    height: 70px;
+    margin-top: 80px;
+    z-index: 1;
+    position: relative;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.444);
+    font-size: 30px;
+    padding-bottom: 2px;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.scrollDownSmall:hover{
+    transition: ease-in 0.1s;
+    transition: ease-out 0.1s;
+    color: rgb(216, 216, 216);
+    cursor: pointer;
+}
+
+.projectDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.textBox{
+    background-color: #070818;
+    height: 40px;
+    width: 615px;
+    border-radius: 0;
+    border: 1px solid rgb(216, 216, 216);
+    color: rgb(216, 216, 216);
+    outline: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.textBox:focus, .textBoxMsg:focus{
+    background-color: #0c0e29;
+}
+
+.textBoxMsg{
+    background-color: #070818;
+    height: 150px;
+    width: 615px;
+    border-radius: 0;
+    border: 1px solid rgb(216, 216, 216);
+    color: rgb(216, 216, 216);
+    outline: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    text-align: left;
+    vertical-align: top;
+    resize: none;
+    padding-left: 10px;
+    padding-top: 5px;
+    overflow-y: auto;
+}
+
+.smallText{
+    font-family: "Poppins", sans-serif;
+    color: rgba(216, 216, 216, 0.2);
+    margin-top: -100px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    text-align: center;
+}
+
+.contactContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.socialMedia{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.submit{
+    height: 40px;
+    border-radius: 0;
+    outline: none;
+    border: 1px solid rgb(216, 216, 216);
+    width: 150px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #070818;
+    color: rgb(216, 216, 216);
+}
+
+.submit:hover{
+    background-color: #0c0e29;
+    cursor: pointer;
+}
+
+.soMeBtn{
+    width: 100px;
+    height: 100px;
+}
+
+.bubble {
+    border-radius: 100%;
+    height: 150px;
+    width: 150px;
+    background-image: url(./images/Some/bubble.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 135px;
+    animation: float 5s ease-in-out infinite;
+  }
+
+    .bubble:hover {
+    transform: scale(1.2);
+    animation: none;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+ 
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+}
+
+.modal-content {
+    background-color: #070818;
+    margin-left: auto;
+    padding: 20px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+}
+
+.close-btn {
+    color: rgb(216, 216, 216);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.characterEditText{
+    font-family: "Tiny5", sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    color: rgb(216, 216, 216);
+}
+
+.characterLayout{
+    display: flex;
+    flex-direction: row;
+}
+
+#editorCanvas{
+    width: 500px;
+    height: 500px;
+}
+
+.editOptions{
+    font-family: "Tiny5", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    color: rgb(216, 216, 216);
+}
+
+.hair, .hairColor, .eyes, .eyeColor, .eyebrows, .clothes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ArrowL, .ArrowR{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-bottom: -20px;
+}
+
+.colorwheelClothes, .colorwheelEye, .colorwheelHair{
+    display: flex;
+    justify-content: center;
+}
+
+.arrows{
+    display: flex;
+    gap: 70px;
+    margin-top: -20px;
+}
+
+.saveCharacter{
+    margin-top: 10px;
+}
+
+.saveBtn{
+    width: 100px;
+    outline: none;
+    border: none;
+    height: 40px;
+    font-family: "Tiny5", sans-serif;
+    font-size: 20px;
+    background-color: #070818;
+    color: rgb(216, 216, 216);
+}
+
+.saveBtn:hover{
+    background-color: #0c0e29;
+}
+
+.carousel{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carouselBtn{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    margin: 10px;
+    gap: 75%;
+}
+
+#artCarousel{
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+
+#websitesCarousel{
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carouselItem1{
+    max-width: 100%;  /* Ensures the image scales down if needed but doesn't stretch */
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.carouselItem2{
+    height: 400px;
+    width: 400px;
+}
+
+.carouselPrev, .carouselNext{
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    background-color: #070818;
+    color: rgb(216, 216, 216);
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.carouselPrev:hover, .carouselNext:hover{
+    background-color: #0c0e29;
+}
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropMenu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the text */
+    left: 0;
+    width: 400px;
+    height: fit-content;
+    background-color: #0c0e29; /* Dark background for better visibility */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .show {display:block;}
+
+  .dropMenu p {
+    color: rgb(216, 216, 216);
+    font-family: "Tiny5", sans-serif;
+    font-size: 20px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropMenu p:hover {
+    background-color: #070818;
+  }
+
+  .totalSum{
+    height: 25px;
+    width: 50px;
+    font-family: "Tiny5", sans-serif;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    margin-left: 5px;
+    padding-left: 5px;
+    background-color: #252847;
+    color: rgb(216, 216, 216);
+  }
+
+  input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-ms-expand {
+  display: none;
+}
+
+  .submitQuest{
+    height: 28px;
+    border-radius: 0;
+    outline: none;
+    border: 3px solid rgb(216, 216, 216);
+    width: 100px;
+    margin-left: 5px;
+    font-family: "Tiny5", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #0c0e29;
+    color: rgb(216, 216, 216);
+    vertical-align: top;
+}
+
+.submitQuest:hover{
+    cursor: pointer;
+}
+
+.expPoints{
+    width: 100px;
+    height: 100px;
+}
+
+#pokemonFact {   
+    color: rgb(216, 216, 216);
+    text-align: center;
+    margin-bottom: -80px;
+    font-family: "Poppins", sans-serif;
+    margin-top: 30px;
+}
+
+#pokemonFact strong{
+    font-family: "Tiny5", sans-serif;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
