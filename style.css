@@ -412,6 +412,7 @@ body {
     font-size: 40px;
     font-weight: 100;
     color: rgb(216, 216, 216);
+    margin: 8px;
 }
 
 .characterLayout{
@@ -434,7 +435,7 @@ body {
     color: rgb(216, 216, 216);
 }
 
-.hair, .hairColor, .eyes, .eyeColor, .eyebrows, .clothes{
+.hair, .hairColor, .eyes, .eyeColor, .eyebrows, .clothes, .skinColor{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -620,3 +621,11 @@ input[type="number"]::-ms-expand {
     font-size: 35px;
     margin-bottom: 5px;
 }
+
+/* change to the pickr here https://github.com/Simonwep/pickr */
+input[type="color"] {
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 1px;
+  }
