@@ -6,6 +6,7 @@ body {
     margin: 0;
     background-color: #070818;
     overflow-x: hidden;
+    cursor: url('./images/Assets/cursor.png'), auto;
 }
 
 .header {
@@ -85,6 +86,7 @@ body {
     border-radius: 50%;
     margin-left: 20px;
     margin-top: 45px;
+    object-fit: cover;
 }
 
 .scrollDown {
@@ -108,7 +110,7 @@ body {
     transition: ease-in 0.1s;
     transition: ease-out 0.1s;
     color: rgb(216, 216, 216);
-    cursor: pointer;
+    cursor: url('./images/Assets/cursor_clickhover.png'), pointer;
 }
 
 .headerimgFile{
@@ -155,7 +157,7 @@ body {
 
 .questText:hover{
     text-decoration: underline;
-    cursor: pointer;
+    cursor: url('./images/Assets/cursor_clickhover.png'), pointer;
 }
 
 .levelText{
@@ -176,7 +178,7 @@ body {
     height: 40px;
     width: 40px;
     padding-left: 15px;
-    cursor: pointer;
+    cursor: url('./images/Assets/cursor_clickhover.png'), pointer;
 }
 
 .literature{
@@ -240,7 +242,7 @@ body {
     transition: ease-in 0.1s;
     transition: ease-out 0.1s;
     color: rgb(216, 216, 216);
-    cursor: pointer;
+    cursor: url('./images/Assets/cursor_clickhover.png'), pointer;
 }
 
 .projectDiv{
@@ -331,12 +333,13 @@ body {
 
 .submit:hover{
     background-color: #0c0e29;
-    cursor: pointer;
+    cursor: url('./images/Assets/cursor_clickhover.png'), pointer;
 }
 
 .soMeBtn{
     width: 100px;
     height: 100px;
+    cursor: url('./images/Assets/cursor_clickhover.png'), pointer;
 }
 
 .bubble {
@@ -348,7 +351,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    cursor: url('./images/Assets/cursor_clickhover.png'), pointer;
     margin-top: 135px;
     animation: float 5s ease-in-out infinite;
   }
@@ -404,7 +407,7 @@ body {
 .close-btn:focus {
     color: rgb(255, 255, 255);
     text-decoration: none;
-    cursor: pointer;
+    cursor: url('./images/Assets/cursor_clickhover.png'), pointer;
 }
 
 .characterEditText{
@@ -423,6 +426,10 @@ body {
 #editorCanvas{
     width: 500px;
     height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
 }
 
 .editOptions{
@@ -433,6 +440,8 @@ body {
     justify-content: center;
     width: 300px;
     color: rgb(216, 216, 216);
+    margin: -45px;
+    margin-top: -30px;
 }
 
 .hair, .hairColor, .eyes, .eyeColor, .eyebrows, .clothes, .skinColor{
@@ -444,8 +453,7 @@ body {
 .ArrowL, .ArrowR{
     width: 30px;
     height: 30px;
-    cursor: pointer;
-    margin-bottom: -20px;
+    cursor: url('./images/Assets/cursor_clickhover.png'), pointer;
 }
 
 .colorwheelClothes, .colorwheelEye, .colorwheelHair{
@@ -494,29 +502,29 @@ body {
     justify-content: center;
     margin: 10px;
     gap: 75%;
+    z-index: 1;
 }
 
 #artCarousel{
-    width: 400px;
-    height: 400px;
-    overflow: hidden;
+    width: 500px;
+    height: 500px;
 }
 
 #websitesCarousel{
-    width: 400px;
-    height: 400px;
-    overflow: hidden;
+    width: 500px;
+    height: 500px;
 }
 
 .carouselItem1{
     max-width: 100%;  /* Ensures the image scales down if needed but doesn't stretch */
-    max-height: 100%;
+    height: 500px;
     object-fit: contain;
 }
 
 .carouselItem2{
-    height: 400px;
-    width: 400px;
+    height: 500px;
+    width: 500px;
+    object-fit: fill;
 }
 
 .carouselPrev, .carouselNext{
@@ -530,7 +538,7 @@ body {
     font-size: 30px;
     text-align: center;
     align-items: center;
-    cursor: pointer;
+    cursor: url('./images/Assets/cursor_clickhover.png'), pointer;
 }
 
 .carouselPrev:hover, .carouselNext:hover{
@@ -565,18 +573,19 @@ body {
     background-color: #070818;
   }
 
-  .totalSum{
-    height: 25px;
+  .totalSum {
+    height: 21px;
     width: 50px;
     font-family: "Tiny5", sans-serif;
     font-size: 20px;
-    border: none;
-    outline: none;
+    border: 3px solid rgb(216, 216, 216); /* Add a border */
+    outline: none; /* Remove the outline */
     margin-left: 5px;
     padding-left: 5px;
     background-color: #252847;
     color: rgb(216, 216, 216);
-  }
+    cursor: url('./images/Assets/cursor_click.png') 16 16, text;
+}
 
   input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button,
@@ -600,13 +609,32 @@ input[type="number"]::-ms-expand {
 }
 
 .submitQuest:hover{
-    cursor: pointer;
+    cursor: url('./images/Assets/cursor_clickhover.png'), pointer;
 }
 
 .expPoints{
     width: 100px;
     height: 100px;
 }
+
+@keyframes growSpinShrink {
+    0% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.5) rotate(720deg); /* Grows and spins */
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0) rotate(720deg); /* Shrinks and disappears */
+      opacity: 0;
+    }
+  }
+
+  .expPoints.animate {
+    animation: growSpinShrink 1s forwards;
+  }
 
 #pokemonFact {   
     color: rgb(216, 216, 216);
@@ -629,3 +657,69 @@ input[type="color"] {
     border: 1px solid rgb(216, 216, 216);
     border-radius: 1px;
   }
+
+#exp1 {
+    display: flex;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin-top: 100px;
+    margin-left: 600px;
+    cursor: url('./images/Assets/cursor_clickhover.png'), pointer;
+    z-index: 1;
+}
+
+#exp2 {
+    display: flex;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin-top: 990px;
+    margin-left: 200px;
+    cursor: url('./images/Assets/cursor_clickhover.png'), pointer;
+    z-index: 1;
+}
+
+#exp3 {
+    display: flex;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin-top: 2000px;
+    margin-right: 600px;
+    cursor: url('./images/Assets/cursor_clickhover.png'), pointer;
+    z-index: 1;
+}
+
+#exp4 {
+    display: flex;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin-top: 2400px;
+    margin-left: 1300px;
+    cursor: url('./images/Assets/cursor_clickhover.png'), pointer;
+    z-index: 1;
+}
+
+#exp5 {
+    display: flex;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin-top: 3000px;
+    margin-right: 1400px;
+    cursor: url('./images/Assets/cursor_clickhover.png'), pointer;
+    z-index: 1;
+}
+
+#exp6 {
+    display: flex;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin-top: 3520px;
+    margin-right: 1500px;
+    cursor: url('./images/Assets/cursor_clickhover.png'), pointer;
+    z-index: 1;
+}

@@ -30,7 +30,7 @@
               id="totalSum"
             /><input type="submit" class="submitQuest" value="Check" />
           </p>
-          <p class="questItem" id="questItem4">Click the hidden star.</p>
+          <p class="questItem" id="questItem4">Click the hidden stars.</p>
         </div>
       </div>
       <div class="gameBar">
@@ -126,16 +126,23 @@
         </div>
         <img src="./images/pfp.jpg" alt="Profile Picture" class="pfp" />
       </div>
+      <div id="exp1" class="expPoints"><img src="./images/Assets/ExpPoints.png" alt=""></div>
+      <div id="exp2" class="expPoints"><img src="./images/Assets/ExpPoints.png" alt=""></div>
+      <div id="exp3" class="expPoints"><img src="./images/Assets/ExpPoints.png" alt=""></div>
+      <div id="exp4" class="expPoints"><img src="./images/Assets/ExpPoints.png" alt=""></div>
+      <div id="exp5" class="expPoints"><img src="./images/Assets/ExpPoints.png" alt=""></div>
+      <div id="exp6" class="expPoints"><img src="./images/Assets/ExpPoints.png" alt=""></div>
+      
 
-      <div class="scrollDown">↓</div>
+      <div class="scrollDown" id="scroll0">↓</div>
     </div>
-    <div class="mainContainer">
+    <div class="mainContainer" id="section0">
       <div class="aboutMe">
         <h1 class="headerText">ABOUT</h1>
         <p class="infoText">
           Yello! My name is Pil August Ekanger, a 26 year old queer and non
           binary website developer focusing on design. I’m proficient in HTML,
-          CSS and Figma, and would say I'm intermediate in JavaScript. I'm based
+          CSS and Figma, and a beginner in JavaScript. I'm based
           in Norway, and fluent in both Norwegian and English.
 
           <br /><br />
@@ -174,9 +181,9 @@
           will hold, and I’m motivated to grow as a person and designer as I go.
         </p>
         <div id="pokemonFact"></div>
-        <div class="scrollDownSmall">↓</div>
+        <div class="scrollDownSmall" id="scroll1">↓</div>
       </div>
-      <div class="experience">
+      <div class="experience" id="section1">
         <h1 class="headerText">EXPERIENCE</h1>
         <p class="infoText" style="text-indent: 30px"><strong>September 2024 - Mars 2025</strong><br /></p>
         <p class="infoText">
@@ -193,13 +200,13 @@
         <p class="infoText" style="text-indent: 30px">
           <strong>Design programs:</strong><br /></p>
           <p class="infoText">Procreate, Fire Alpaca, Krita, Carrd, Figma, Fourthwall. <br /><br /></p>
-          <p class="infoText" style="text-indent: 30px">
+          <!-- <p class="infoText" style="text-indent: 30px">
           <strong>Consoles</strong><br />
           <p class="infoText">PlayStation 5, Nintendo Switch, PC, MetaQuest 3. Older consoles include GameCube, SNES, Wii, DS/3DS and earlier PlayStation models.
-        </p>
-        <div class="scrollDownSmall">↓</div>
+        </p> -->
+        <div class="scrollDownSmall" id="scroll2">↓</div>
       </div>
-      <div class="projects">
+      <div class="projects" id="section2">
         <h1 class="headerText">PROJECTS</h1>
         <p class="infoText">
           Here's a collection of both websites I've made, as well as designs and
@@ -211,12 +218,16 @@
             <h2 class="subHeader">GRAPHICS</h2>
             <div class="carousel" id="artCarousel">
               <div class="carouselImg">
-                <img src="./images/carousel_art/art1.png" alt="Art 1" class="carouselItem1">
-                <img src="./images/carousel_art/art2.png" alt="Art 1" class="carouselItem1">
+                <img src="./images/carousel_art/art1.jpeg" alt="Art 1" class="carouselItem1">
+                <img src="./images/carousel_art/art2.jpeg" alt="Art 1" class="carouselItem1">
                 <img src="./images/carousel_art/art3.png" alt="Art 1" class="carouselItem1">
                 <img src="./images/carousel_art/art4.png" alt="Art 1" class="carouselItem1">
                 <img src="./images/carousel_art/art5.png" alt="Art 1" class="carouselItem1">
                 <img src="./images/carousel_art/art6.png" alt="Art 1" class="carouselItem1">
+                <img src="./images/carousel_art/art7.jpeg" alt="Art 1" class="carouselItem1">
+                <img src="./images/carousel_art/art8.jpeg" alt="Art 1" class="carouselItem1">
+                <img src="./images/carousel_art/art9.jpeg" alt="Art 1" class="carouselItem1">
+                <img src="./images/carousel_art/art10.jpeg" alt="Art 1" class="carouselItem1">
               </div>
               <div class="carouselBtn">
                 <button class="carouselPrev" id="artPrev">&lt;</button>
@@ -229,12 +240,12 @@
             <div class="carousel" id="websitesCarousel">
               <div class="carouselImg">
                 <iframe
-                  src="https://pilaugust.github.io/Task-2/"
+                  src="https://vgen.co/theraccoonMaple"
                   frameborder="0"
                   class="carouselItem2"
                 ></iframe>
                 <iframe
-                  src="https://pilaugust.github.io/Task-5/"
+                  src="https://theraccoonmaple.carrd.co/"
                   frameborder="0"
                   class="carouselItem2"
                 ></iframe>
@@ -246,21 +257,14 @@
             </div>
           </div>
         </div>
-        <div class="scrollDownSmall">↓</div>
+        <div class="scrollDownSmall" id="scroll3">↓</div>
       </div>
-      <div class="contact">
+      <div class="contact" id="section3">
         <h1 class="headerText">CONTACT</h1>
         <p class="infoText">
           I'm available for contact through any of the
           social bubbles below!
         </p>
-        <!-- <div class="contactContainer">
-          <div class="contactForm">
-            <input type="text" placeholder="Name" class="textBox" />
-            <input type="text" placeholder="E-mail" class="textBox" />
-            <textarea placeholder="Message" class="textBoxMsg"></textarea>
-            <input type="submit" class="submit" id="submit" value="SUBMIT" />
-          </div> -->
           <div class="socialMedia">
             <div class="bubble">
               <img
@@ -275,7 +279,7 @@
               /></a>
             </div>
             <div class="bubble">
-              <a href=""
+              <a href="https://no.linkedin.com/in/pil-august-ekanger-058a6b342"
                 ><img src="./images/Some/linkedin.png" alt="" class="soMeBtn"
               /></a>
             </div>
@@ -284,11 +288,6 @@
                 ><img src="./images/Some/bsky.png" alt="" class="soMeBtn"
               /></a>
             </div>
-            <!-- <div class="bubble">
-              <a href=""
-                ><img src="./images/Some/mail.png" alt="" class="soMeBtn"
-              /></a>
-            </div> -->
             <div class="bubble">
               <img
                 src="./images/Assets/ExpPoints.png"
